@@ -1,0 +1,13 @@
+def read_file_safely(filename):
+
+    try:
+        with open(filename, "r") as file:
+            return file.read()
+
+    except FileNotFoundError:
+        return "File not found"
+
+
+result = read_file_safely("data.txt")
+
+print(result)
